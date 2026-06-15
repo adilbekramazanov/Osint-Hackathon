@@ -155,6 +155,12 @@
     .tcard .mark { font-size: 1.9rem; }
     .tcard h3 { font-weight: 600; font-size: 1.2rem; margin-bottom: .6rem; }
     .tcard p { font-size: .88rem; color: var(--muted); line-height: 1.65; }
+    .tcard .ex { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+    .tcard .ex-h { font-family: var(--mono); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); margin-bottom: .6rem; }
+    .tcard .ex ul { list-style: none; }
+    .tcard .ex li { font-size: .84rem; color: var(--text); padding: .35rem 0 .35rem 1.2rem; position: relative; line-height: 1.5; }
+    .tcard .ex li::before { content: '→'; position: absolute; left: 0; color: var(--lime); }
+    .tcard .ex li small { display: block; color: var(--muted); font-size: .8rem; }
     .tcard.free { border: 1px solid rgba(139,92,255,.5); background: linear-gradient(160deg, rgba(139,92,255,.1), transparent 60%); grid-column: 1 / -1; }
     .tcard.free::before { background: var(--violet); }
     .tcard.free h3 { color: var(--violet); }
@@ -362,8 +368,15 @@
       <p class="s-desc">Три категории на выбор. Темы объявляются в вечер вторника. Тема «Фристайл» требует предварительного согласования с жюри.</p>
     </div>
     <div class="themes reveal">
-      <div class="tcard"><div class="no"><span>01 / КАТЕГОРИЯ</span><span class="mark">💡</span></div><h3>Новая фича</h3><p>Принципиально новая функция для ОСИНТ-расследований: новый способ сбора, обогащения или визуализации данных об объекте. Инновация как главная ценность.</p></div>
-      <div class="tcard"><div class="no"><span>02 / КАТЕГОРИЯ</span><span class="mark">📊</span></div><h3>Работа с данными</h3><p>ИИ-решение для анализа больших массивов ОСИНТ-данных: графы связей, аномалии, паттерны поведения, временные ряды активности.</p></div>
+      <div class="tcard"><div class="no"><span>01 / КАТЕГОРИЯ</span><span class="mark">💡</span></div><h3>Новая фича</h3><p>Принципиально новая функция для ОСИНТ-расследований: новый способ сбора, обогащения или визуализации данных об объекте. Инновация как главная ценность.</p>
+        <div class="ex"><div class="ex-h">Примеры идей</div><ul>
+          <li>Автотранскрибация аудио из Telegram<small>речь из голосовых и кружков → текст для поиска и анализа</small></li>
+        </ul></div></div>
+      <div class="tcard"><div class="no"><span>02 / КАТЕГОРИЯ</span><span class="mark">📊</span></div><h3>Работа с данными</h3><p>ИИ-решение для анализа больших массивов ОСИНТ-данных: графы связей, аномалии, паттерны поведения, временные ряды активности.</p>
+        <div class="ex"><div class="ex-h">Примеры идей</div><ul>
+          <li>Auto Researcher<small>выбираешь страну → список доступных источников + аналитика по методам сбора</small></li>
+          <li>База участников СВО<small>агрегация и структурирование данных в единую базу</small></li>
+        </ul></div></div>
       <div class="tcard free"><div class="no"><span>03 / КАТЕГОРИЯ · FREESTYLE</span><span class="mark">🎲</span></div><h3>Фристайл</h3><p>Свободная тема: собственная ОСИНТ-идея, которая не вписывается в категории 01–02. Главное — польза для расследовательской работы.</p><div class="approve">⚠ Тему необходимо заранее согласовать с одним из членов жюри</div></div>
     </div>
   </div>
