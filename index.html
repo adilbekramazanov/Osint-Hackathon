@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Linxera OSINT Хакатон 2026</title>
-  <meta name="description" content="Linxera OSINT Хакатон 2026 — внутренний 48-часовой хакатон по ИИ-инструментам для расследований. 5 тем, индивидуальный зачёт, главный приз 150 000 ₸. Регистрация открыта." />
-  <meta property="og:title" content="Linxera OSINT Хакатон 2026" />
-  <meta property="og:description" content="48 часов · 5 тем · индивидуальный зачёт · главный приз 150 000 ₸. Постройте ИИ-инструмент для расследований." />
+  <title>Linxera Хакатон 2026</title>
+  <meta name="description" content="Linxera Хакатон 2026 — внутренний 48-часовой хакатон. 4 трека, командный зачёт (до 3 человек), призовой фонд 3 млн ₸. Регистрация открыта." />
+  <meta property="og:title" content="Linxera Хакатон 2026" />
+  <meta property="og:description" content="48 часов · 4 трека · командный зачёт · призовой фонд 3 млн ₸. Постройте инструмент для расследований." />
   <meta property="og:type" content="website" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
@@ -177,7 +177,7 @@
     .cw { font-family: var(--mono); font-weight: 800; font-size: clamp(1.6rem,4vw,2.4rem); color: var(--lime); }
 
     /* ===== JUDGES ===== */
-    .judges { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .judges { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
     .jcard { background: var(--panel); padding: 2rem 1.5rem; transition: background .25s; }
     .jcard:hover { background: var(--panel2); }
     .jav { width: 60px; height: 60px; border-radius: 8px; background: linear-gradient(135deg, var(--violet), var(--cyan)); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 800; font-size: 1.5rem; color: #fff; margin-bottom: 1.5rem; }
@@ -203,6 +203,16 @@
     .rg ul { list-style: none; }
     .rg li { font-size: .88rem; color: var(--muted); padding: .45rem 0 .45rem 1.6rem; position: relative; }
     .rg li::before { content: '//'; position: absolute; left: 0; font-family: var(--mono); font-size: .7rem; color: var(--cyan); top: .55rem; }
+
+    /* ===== RESOURCES ===== */
+    .res { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .ritem { background: var(--panel); display: grid; grid-template-columns: 48px 1fr auto; gap: 1.25rem; align-items: center; padding: 1.4rem 1.5rem; transition: background .25s; }
+    .ritem:hover { background: var(--panel2); }
+    .ritem .rno { font-family: var(--mono); color: var(--cyan); font-weight: 700; font-size: .9rem; }
+    .ritem h3 { font-weight: 600; font-size: 1.05rem; }
+    .ritem h3.rsoon { color: var(--muted); font-weight: 400; }
+    .ritem .rtag { font-family: var(--mono); font-size: .66rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); border: 1px solid var(--line); padding: .3rem .7rem; border-radius: 100px; white-space: nowrap; }
+    .res-empty { background: var(--panel); padding: 1.4rem 1.5rem; font-family: var(--mono); font-size: .82rem; color: var(--muted); }
 
     /* ===== REGISTER ===== */
     #register { border-top: 1px solid var(--line); }
@@ -277,7 +287,7 @@
 
 <!-- PRELOADER -->
 <div class="pre" id="pre">
-  <div class="pre-tag">Linxera // OSINT</div>
+  <div class="pre-tag">Linxera // Хакатон</div>
   <div class="pre-num"><span id="pn">0</span><b>%</b></div>
   <div class="pre-bar"><i id="pf"></i></div>
   <div class="pre-lines" id="pl">init.modules…</div>
@@ -293,6 +303,7 @@
     <a href="#judges">Жюри</a>
     <a href="#prizes">Призы</a>
     <a href="#rules">Правила</a>
+    <a href="#resources">Доступы</a>
   </div>
   <a href="#register" class="nav-reg">Регистрация</a>
 </nav>
@@ -307,20 +318,20 @@
       <span class="chip live">Live · Июнь 2026</span>
       <span class="chip">Внутренний хакатон</span>
       <span class="chip"><b>48</b>&nbsp;часов</span>
-      <span class="chip"><b>03</b>&nbsp;темы</span>
+      <span class="chip"><b>04</b>&nbsp;трека</span>
     </div>
-    <h1>Linxera<br/><span class="grad glitch">OSINT</span><br/>Хакатон</h1>
-    <p class="hero-tag">// ИИ-инструменты для расследований · <b>среда → пятница</b> · индивидуальный зачёт</p>
+    <h1>Linxera<br/><span class="grad glitch">Хакатон</span></h1>
+    <p class="hero-tag">// ИИ-инструменты для расследований · <b>среда → пятница</b> · командный зачёт · до 3 человек</p>
     <div class="hero-actions">
       <a href="#register" class="btn btn-primary">Участвовать →</a>
       <a href="#themes" class="btn btn-ghost">Смотреть темы</a>
     </div>
 
     <div class="hero-stats">
-      <div class="stat"><div class="stat-val">150K</div><div class="stat-label">Главный приз, ₸</div></div>
+      <div class="stat"><div class="stat-val">3 млн</div><div class="stat-label">Призовой фонд, ₸</div></div>
       <div class="stat"><div class="stat-val">48ч</div><div class="stat-label">На разработку</div></div>
-      <div class="stat"><div class="stat-val">03</div><div class="stat-label">Темы хакатона</div></div>
-      <div class="stat"><div class="stat-val">01</div><div class="stat-label">Участник = проект</div></div>
+      <div class="stat"><div class="stat-val">04</div><div class="stat-label">Трека хакатона</div></div>
+      <div class="stat"><div class="stat-val">≤3</div><div class="stat-label">Человека в команде</div></div>
     </div>
   </div>
 </header>
@@ -336,7 +347,7 @@
     <div class="tl reveal">
       <div class="tl-item">
         <div class="tl-when"><b>ВТ</b><small>вечер</small></div>
-        <div><div class="tl-name">Старт: объявление тем</div><ul class="tl-ul"><li>Официальный анонс трёх тематических категорий</li><li>Открытие регистрации</li><li>Q&A — ответы на вопросы участников</li></ul></div>
+        <div><div class="tl-name">Старт: объявление тем</div><ul class="tl-ul"><li>Официальный анонс четырёх тематических треков</li><li>Открытие регистрации</li><li>Q&A — ответы на вопросы участников</li></ul></div>
       </div>
       <div class="tl-item">
         <div class="tl-when"><b>СР</b><small>весь день</small></div>
@@ -348,14 +359,14 @@
       </div>
       <div class="tl-item dl">
         <div class="tl-when"><b>ЧТ</b><small>23:59</small></div>
-        <div><div class="tl-name warn">⚠ Дедлайн — последний коммит</div><ul class="tl-ul"><li>Репозиторий закрывается в 23:59 четверга</li><li>Коммиты после не принимаются</li></ul></div>
+        <div><div class="tl-name warn">Дедлайн — последний коммит</div><ul class="tl-ul"><li>Репозиторий закрывается в 23:59 четверга</li><li>Коммиты после не принимаются</li></ul></div>
       </div>
       <div class="tl-item">
         <div class="tl-when"><b>ПТ</b><small>день</small></div>
         <div><div class="tl-name">Презентации и награждение</div><ul class="tl-ul"><li>Жеребьёвка порядка выступлений</li><li>Презентации (5–7 мин + вопросы)</li><li>Оценка жюри и церемония</li></ul></div>
       </div>
     </div>
-    <div class="alert reveal"><span>⚠</span><div><b>Критический дедлайн:</b> последний коммит принимается строго до <b>четверга 23:59</b>. После закрытия репозитория изменения невозможны.</div></div>
+    <div class="alert reveal"><div><b>Критический дедлайн:</b> последний коммит принимается строго до <b>четверга 23:59</b>. После закрытия репозитория изменения невозможны.</div></div>
   </div>
 </section>
 
@@ -365,19 +376,13 @@
     <div class="s-head reveal">
       <div class="kicker">02 — Categories</div>
       <h2 class="s-title">Темы хакатона</h2>
-      <p class="s-desc">Три категории на выбор. Темы объявляются в вечер вторника. Тема «Фристайл» требует предварительного согласования с жюри.</p>
+      <p class="s-desc">Четыре трека на выбор. Темы объявляются в вечер вторника. «Фристайл» — без ограничений по модулю и форме.</p>
     </div>
     <div class="themes reveal">
-      <div class="tcard"><div class="no"><span>01 / КАТЕГОРИЯ</span><span class="mark">💡</span></div><h3>Новая фича</h3><p>Принципиально новая функция для ОСИНТ-расследований: новый способ сбора, обогащения или визуализации данных об объекте. Инновация как главная ценность.</p>
-        <div class="ex"><div class="ex-h">Примеры идей</div><ul>
-          <li>Автотранскрибация аудио из Telegram<small>речь из голосовых и кружков → текст для поиска и анализа</small></li>
-        </ul></div></div>
-      <div class="tcard"><div class="no"><span>02 / КАТЕГОРИЯ</span><span class="mark">📊</span></div><h3>Работа с данными</h3><p>ИИ-решение для анализа больших массивов ОСИНТ-данных: графы связей, аномалии, паттерны поведения, временные ряды активности.</p>
-        <div class="ex"><div class="ex-h">Примеры идей</div><ul>
-          <li>Auto Researcher<small>выбираешь страну → список доступных источников + аналитика по методам сбора</small></li>
-          <li>База участников СВО<small>агрегация и структурирование данных в единую базу</small></li>
-        </ul></div></div>
-      <div class="tcard free"><div class="no"><span>03 / КАТЕГОРИЯ · FREESTYLE</span><span class="mark">🎲</span></div><h3>Фристайл</h3><p>Свободная тема: собственная ОСИНТ-идея, которая не вписывается в категории 01–02. Главное — польза для расследовательской работы.</p><div class="approve">⚠ Тему необходимо заранее согласовать с одним из членов жюри</div></div>
+      <div class="tcard"><div class="no"><span>01 / ТРЕК</span></div><h3>Новые возможности в продуктах</h3><p>Новые возможности в продуктах дивизиона Linxera, которые ускоряют или упрощают работу следователя/аналитика.</p></div>
+      <div class="tcard"><div class="no"><span>02 / ТРЕК</span></div><h3>Оптимизация процессов</h3><p>Автоматизация рутины внутри продукта и команды — то, что сейчас делается вручную и занимает много времени: планирование/ревью, отчёты, онбординг, поддержка.</p></div>
+      <div class="tcard"><div class="no"><span>03 / ТРЕК</span></div><h3>ИИ в расследованиях</h3><p>Применение LLM и ML поверх данных Linxera для анализа, осмысления и обогащения информации в работе аналитика.</p></div>
+      <div class="tcard free"><div class="no"><span>04 / ТРЕК · FREESTYLE</span></div><h3>Фристайл</h3><p>Любая идея, которая делает работу пользователя быстрее, точнее или приятнее — без ограничений по модулю и форме.</p></div>
     </div>
   </div>
 </section>
@@ -391,9 +396,9 @@
       <p class="s-desc">Жюри оценивает каждый проект по трём критериям. Максимум — 100 баллов. Наибольший вес у бизнес-ценности.</p>
     </div>
     <div class="crit reveal" id="critList">
-      <div class="crow"><div class="cno">01</div><div><h3>Бизнес-ценность</h3><p>Реальная применимость в расследовательской работе, ROI, масштабируемость решения.</p><div class="cbar"><i data-w="40%"></i></div></div><div class="cw">40%</div></div>
-      <div class="crow"><div class="cno">02</div><div><h3>Техническая реализация</h3><p>Архитектура решения, стабильность работы, современные технологии.</p><div class="cbar"><i data-w="35%"></i></div></div><div class="cw">35%</div></div>
-      <div class="crow"><div class="cno">03</div><div><h3>Качество презентации</h3><p>Чёткость изложения, убедительность демонстрации, ответы на вопросы жюри.</p><div class="cbar"><i data-w="25%"></i></div></div><div class="cw">25%</div></div>
+      <div class="crow"><div class="cno">01</div><div><h3>Бизнес-ценность</h3><p>Реальная применимость в расследовательской работе, ROI, масштабируемость решения.</p><div class="cbar"><i data-w="50%"></i></div></div><div class="cw">50%</div></div>
+      <div class="crow"><div class="cno">02</div><div><h3>Техническая реализация</h3><p>Архитектура решения, стабильность работы, современные технологии.</p><div class="cbar"><i data-w="30%"></i></div></div><div class="cw">30%</div></div>
+      <div class="crow"><div class="cno">03</div><div><h3>Качество презентации</h3><p>Чёткость изложения, убедительность демонстрации, ответы на вопросы жюри.</p><div class="cbar"><i data-w="20%"></i></div></div><div class="cw">20%</div></div>
     </div>
   </div>
 </section>
@@ -404,12 +409,13 @@
     <div class="s-head reveal">
       <div class="kicker">04 — Jury</div>
       <h2 class="s-title">Состав жюри</h2>
-      <p class="s-desc">Три судьи с разными профилями — технический, управленческий и стратегический взгляд на каждый проект.</p>
+      <p class="s-desc">Четыре судьи с разными профилями — технический, операционный, коммерческий и стратегический взгляд на каждый проект.</p>
     </div>
     <div class="judges reveal">
-      <div class="jcard"><div class="jav">Г</div><h3>Галимхан</h3><div class="jrole">Директор</div><div class="jfocus">Стратегическая оценка</div><div class="jd">Оценивает инновационность и масштаб идеи. Выносит финальное решение по победителям.</div></div>
-      <div class="jcard"><div class="jav">А</div><h3>Адильбек</h3><div class="jrole">Проджект менеджер</div><div class="jfocus">Бизнес-ценность</div><div class="jd">Оценивает применимость в работе, потенциальный ROI и соответствие теме хакатона.</div></div>
-      <div class="jcard"><div class="jav">Н</div><h3>Нурсултан</h3><div class="jrole">Тимлид</div><div class="jfocus">Техническая оценка</div><div class="jd">Оценивает архитектуру решения и техническую реализуемость проекта.</div></div>
+      <div class="jcard"><div class="jav">А</div><h3>Айзада</h3><div class="jrole">Директор 7Generation</div><div class="jfocus">Стратегическая оценка</div><div class="jd">Оценивает масштаб и стратегическую значимость идеи. Выносит финальное решение по победителям.</div></div>
+      <div class="jcard"><div class="jav">Г</div><h3>Галимхан</h3><div class="jrole">Операционный директор</div><div class="jfocus">Процессы и применимость</div><div class="jd">Оценивает, насколько решение встраивается в реальные процессы и упрощает работу команды.</div></div>
+      <div class="jcard"><div class="jav">И</div><h3>Игорь</h3><div class="jrole">Технический директор</div><div class="jfocus">Техническая оценка</div><div class="jd">Оценивает архитектуру решения, стабильность и техническую реализуемость проекта.</div></div>
+      <div class="jcard"><div class="jav">У</div><h3>Уаис</h3><div class="jrole">Директор коммерческого департамента</div><div class="jfocus">Коммерческий потенциал</div><div class="jd">Оценивает бизнес-ценность, потенциальный ROI и перспективы внедрения решения.</div></div>
     </div>
   </div>
 </section>
@@ -420,12 +426,11 @@
     <div class="s-head reveal">
       <div class="kicker">05 — Rewards</div>
       <h2 class="s-title">Призы</h2>
-      <p class="s-desc">Главный приз за лучшее решение, отдельные призы по каждой категории и спец-приз по голосованию участников.</p>
+      <p class="s-desc">Призовой фонд 3 млн ₸: главный приз, призы по каждому треку и спец-приз по голосованию участников.</p>
     </div>
     <div class="prizes reveal">
-      <div class="pcard gold"><span class="pmark">🥇</span><div class="pamt">150 000 ₸</div><div class="pname">Главный приз</div><div class="pd">Лучшее решение хакатона по итоговой оценке жюри.</div></div>
-      <div class="pcard"><span class="pmark">🏅</span><div class="pamt">×3</div><div class="pname">Приз по категории</div><div class="pd">Лучший проект в каждой из трёх категорий.</div></div>
-      <div class="pcard"><span class="pmark">🗳️</span><div class="pamt">Выбор</div><div class="pname">Спец-приз участников</div><div class="pd">Участники голосуют сами — приз получает проект, набравший больше всего голосов. Детали будут оглашены позже.</div></div>
+      <div class="pcard gold"><div class="pamt">3 млн ₸</div><div class="pname">Призовой фонд</div><div class="pd">Общий призовой фонд хакатона распределяется между победителями по итоговой оценке жюри.</div></div>
+      <div class="pcard"><div class="pamt">Выбор</div><div class="pname">Спец-приз участников</div><div class="pd">Участники голосуют сами — приз получает проект, набравший больше всего голосов. Детали будут оглашены позже.</div></div>
     </div>
   </div>
 </section>
@@ -439,8 +444,25 @@
       <p class="s-desc">Прочитайте внимательно перед участием.</p>
     </div>
     <div class="rules reveal">
-      <div class="rg"><h3>Участники</h3><ul><li>Один участник — один проект</li><li>Регистрация до 22:00 вторника</li></ul></div>
+      <div class="rg"><h3>Команды</h3><ul><li>Команды до 3 человек</li><li>Не более 2 разработчиков в команде</li><li>Регистрация до 22:00 вторника</li></ul></div>
       <div class="rg"><h3>Технические требования</h3><ul><li>Весь код должен быть доступен в Gitlab</li><li>README обязателен с инструкцией запуска</li><li>Проект должен запускаться на презентации</li><li>Open-source библиотеки и AI API — разрешены</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="kicker">07 — Resources</div>
+      <h2 class="s-title">Доступы и инструменты</h2>
+      <p class="s-desc">Справочник доступов, тестовых данных и инструментов для участников. Список будет дополняться.</p>
+    </div>
+    <div class="res reveal">
+      <div class="ritem"><div class="rno">01</div><h3>ElasticSearch sample database</h3><span class="rtag">База данных</span></div>
+      <div class="ritem"><div class="rno">02</div><h3 class="rsoon">—</h3><span class="rtag">скоро</span></div>
+      <div class="ritem"><div class="rno">03</div><h3 class="rsoon">—</h3><span class="rtag">скоро</span></div>
+      <div class="ritem"><div class="rno">04</div><h3 class="rsoon">—</h3><span class="rtag">скоро</span></div>
     </div>
   </div>
 </section>
@@ -449,9 +471,9 @@
 <section id="register">
   <div class="wrap">
     <div class="s-head reveal">
-      <div class="kicker">07 — Register</div>
+      <div class="kicker">08 — Register</div>
       <h2 class="s-title">Регистрация</h2>
-      <p class="s-desc">Заполните форму до 22:00 вторника. Один участник — один проект. После закрытия регистрации заявки не принимаются.</p>
+      <p class="s-desc">Заполните форму до 22:00 вторника. Команды до 3 человек (не более 2 разработчиков). После закрытия регистрации заявки не принимаются.</p>
     </div>
     <div class="reg-wrap reveal">
       <div class="reg-glow"></div>
@@ -467,9 +489,10 @@
           <div class="field">
             <label>Тематика продукта <b>*</b></label>
             <div class="opts">
-              <div class="opt"><input type="radio" id="t1" name="entry.2120385709" value="Новая фича" required /><label for="t1">Новая фича</label></div>
-              <div class="opt"><input type="radio" id="t4" name="entry.2120385709" value="Работа с данными" /><label for="t4">Работа с данными</label></div>
-              <div class="opt"><input type="radio" id="t5" name="entry.2120385709" value="Фристайл" /><label for="t5">Фристайл 🎲</label></div>
+              <div class="opt"><input type="radio" id="t1" name="entry.2120385709" value="Новые возможности в продуктах" required /><label for="t1">Новые возможности в продуктах</label></div>
+              <div class="opt"><input type="radio" id="t2" name="entry.2120385709" value="Оптимизация процессов" /><label for="t2">Оптимизация процессов</label></div>
+              <div class="opt"><input type="radio" id="t3" name="entry.2120385709" value="ИИ в расследованиях" /><label for="t3">ИИ в расследованиях</label></div>
+              <div class="opt"><input type="radio" id="t5" name="entry.2120385709" value="Фристайл" /><label for="t5">Фристайл</label></div>
             </div>
           </div>
 
@@ -485,7 +508,6 @@
         </form>
 
         <div class="reg-done" id="regDone">
-          <span class="mark">✅</span>
           <h3>Заявка <span class="grad">принята</span></h3>
           <p>Мы зафиксировали вашу регистрацию. Детали тем — в вечер вторника.</p>
           <button class="reg-again" type="button" id="regAgain">Отправить ещё одну →</button>
@@ -503,8 +525,8 @@
   <div class="wrap">
     <div class="foot-big">Build. Ship.<br/><span class="grad">Win.</span></div>
     <div class="foot-meta">
-      <span>// LINXERA · OSINT ХАКАТОН 2026</span>
-      <span>Удачи всем участникам 🚀</span>
+      <span>// LINXERA · ХАКАТОН 2026</span>
+      <span>Удачи всем участникам</span>
     </div>
   </div>
 </footer>
